@@ -5,11 +5,11 @@ input_file = "show-tech-support.txt"
 
 
 def main():
-    with open(input_file, 'r') as f:
+    with open(input_file, "r") as f:
         output_dict = {}
         command = ""
         for line in f:
-            if line.startswith('--') and 'show' in line:
+            if line.startswith("--") and "show" in line:
                 # This is a new command since all commands are "formatted" starting/ending with a bunch of dashes.
                 new_command = True
                 command = line.strip("-\n ")
@@ -23,5 +23,5 @@ def main():
         print(key)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
